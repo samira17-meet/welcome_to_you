@@ -1,0 +1,29 @@
+<!DOCTYPE >
+<html>
+<head>
+	<title>shopping items</title>
+	<h1>pick an item</h1>
+</head>
+<body>
+{% extends "array.html" %}
+{% block title %}{{product.name}}{% endblock %}
+{% block body %}
+<img src={{product.photo}} height="300"></img>
+
+
+<p> {{product.description}} </p>
+
+
+<p> ${{product.price}} </p>
+
+
+<form action={{url_for('addToCart', product_id = product.id)}} method='post'>
+  Quantity:
+  <input type="number" name="quantity"
+   min="0" max="100" step="1" value="1">
+  <input type="submit" value = "Add to Cart">
+</form>
+{% endblock %}
+
+</body>
+</html>

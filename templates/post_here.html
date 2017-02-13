@@ -1,0 +1,16 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+	<h1> write your problems </h1>
+</head>
+<body>
+<form action="{{ url_for('postHere')}}" method="POST">
+	<textarea name="status" rows="10" cols="60">
+		Post Here
+	</textarea>
+	<input type="submit" value ="Post">
+</form>
+
+</body>
+</html>
